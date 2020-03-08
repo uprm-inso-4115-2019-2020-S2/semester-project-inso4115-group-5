@@ -6,51 +6,36 @@ import scalajs.js.annotation.JSExport
 import scalatags.JsDom.all._
 
 @JSExport
-object TutorialApp0 extends{
-  @JSExport
-  def main(target: html.Div) ={
-    val (f, d) = ("fox", "dog")
-    target.innerHTML = s"""
-    <div>
-      <h1>Hello World!</h1>
-      <h3>This is made without the Scalatags library.</h3>
-      <p>
-        The quick brown <b>$f</b>
-        jumps over the lazy <i>$d</b>
-      </p>
-    </div>
-    """
-  }
-}
-
-@JSExport
 object TutorialApp extends{
   @JSExport
-  def main(target: html.Div) = {
-    val (animalA, animalB) = ("fox", "dog")
+  def addCourse(target: html.Div) = {
 
+    val subSection = dom.document.getElementById("courses")
 
-    val btn = button(
-      "Click me",
+    val addCourseButton = button(
+      "Add Course",
       onclick := { () =>
-        target.appendChild(
-          p("This is how you control the dom with scalajs").render
+        subSection.appendChild(
+          div(
+            p("New Course:"),
+            form(
+              label("Course Name", `for`:="course-name"),
+              input("course-name", `type`:="text"),
+              label("Credits", `for`:="credits"),
+              input("credits", `type`:="num"),
+              label("Final Grade", `for`:="final-grade"),
+              input("final-grade", `type`:="text"),
+            )
+          ).render
         )
       })
 
-
     target.appendChild(
       div(
-        h1("Hello World!"),
-        h3("This is ", i("with"), " the Scalatags library"),
-        p(
-          "The quick brown ", b(animalA),
-          " jumps over the lazy ",
-          i(animalB), "."
-        ),
-        btn
+        addCourseButton
       ).render
     )
+
   }
 
 }

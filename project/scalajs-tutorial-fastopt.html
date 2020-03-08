@@ -7,17 +7,17 @@
     </head>
 
     <body>
-        <div id="main-section"></div>
-        <div id="sub-section"></div>
+        <h1>Life Balance</h1>
+        <h2>GPA Calculator</h2>
+        <div id="courses"></div>
+        <div id="add-course"></div>
+
 
         <!-- Include Scala.js compiled code -->
         <script type="text/javascript" src="../target/scala-2.12/scalajsproject-fastopt.js"></script>
 
         <script>
-            tutorial.webapp.TutorialApp0().main(document.getElementById('main-section'));
-        </script>
-        <script>
-            tutorial.webapp.TutorialApp().main(document.getElementById('sub-section'));
+            tutorial.webapp.TutorialApp().addCourse(document.getElementById('add-course'));
         </script>
     </body>
 
