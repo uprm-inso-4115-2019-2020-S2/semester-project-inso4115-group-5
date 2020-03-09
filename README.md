@@ -1,6 +1,9 @@
 # scalajs-base-project
 Base environment setup for IntelliJ made following the basic tutorial on scala-js.org
 
+## Demo
+![Gpa Demo](https://github.com/uprm-inso-4115-2019-2020-S2/semester-project-inso4115-group-5/blob/master/demo/gpademo.gif)
+
 ## Setup
 First, make sure you have the scala compiler installed. If you've never worked with scala, you probably don't have it. You can get it [here](scala-lang.org)
 
