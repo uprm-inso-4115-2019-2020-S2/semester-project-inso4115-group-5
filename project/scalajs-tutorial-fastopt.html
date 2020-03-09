@@ -9,15 +9,20 @@
     <body>
         <h1>Life Balance</h1>
         <h2>GPA Calculator</h2>
-        <div id="courses"></div>
+        <form id="courses"></form>
         <div id="add-course"></div>
 
+        <div id="gpa"></div>
+        <div id="result"></div>
 
         <!-- Include Scala.js compiled code -->
         <script type="text/javascript" src="../target/scala-2.12/scalajsproject-fastopt.js"></script>
 
         <script>
             tutorial.webapp.TutorialApp().addCourse(document.getElementById('add-course'));
+        </script>
+        <script>
+            tutorial.webapp.TutorialApp().calculateGPA(document.getElementById('gpa'));
         </script>
     </body>
 
